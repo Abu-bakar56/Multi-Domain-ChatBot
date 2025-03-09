@@ -46,4 +46,10 @@ chat_application = gr.Interface(
     article="© 2025 by AbuBakar Shahzad | All Rights Reserved"
 )
 
-chat_application.launch(server_port=7862)
+
+
+# Get the port from the environment variable (default to 7862 if not set)
+port = int(os.getenv("PORT", "7862"))
+
+# Launch the Gradio app
+chat_application.launch(server_name="0.0.0.0", server_port=port, share=False)
