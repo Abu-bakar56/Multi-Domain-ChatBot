@@ -46,4 +46,4 @@ chat_application = gr.Interface(
     article="© 2025 by AbuBakar Shahzad | All Rights Reserved"
 )
 
-chat_application.launch()
+chat_application.launch(server_port=7862)
